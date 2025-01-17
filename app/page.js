@@ -1,14 +1,16 @@
 "use client"
 import axios from "axios";
 import { redirect } from "next/navigation";
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 
 export default function page() {
   const [user,setUser]=useState({email:"",password:""});
-  if(localStorage.getItem('token'))
-  {
-    redirect('/dashboard');
-  }
+  useEffect(()=>{
+    if(localStorage.getItem('token'))
+      {
+        redirect('/dashboard');
+      }
+  },[])
   const handleSubmit = async(e) => {
     e.preventDefault();
     let token=await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/user/login`,user)
