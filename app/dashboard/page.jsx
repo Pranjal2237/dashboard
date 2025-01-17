@@ -10,9 +10,10 @@ const page = () => {
   const [domain, setDomain] = useState("");
   const [sheetID, setSheetID] = useState("");
   const [isEditing,setIsEditing]=useState({check:false,id:""});
-  if(!localStorage.getItem('token'))
+  let token=localStorage.getItem('token');
+  if(!token)
   {
-    redirect('/');
+    redirect('/')
   }
   useEffect(()=>{
     async function getList() {
