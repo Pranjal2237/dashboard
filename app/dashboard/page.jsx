@@ -2,6 +2,7 @@
 
 import { AddDomain, Lists } from "@/components";
 import axios from "axios";
+import { redirect } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const page = () => {
@@ -9,6 +10,10 @@ const page = () => {
   const [domain, setDomain] = useState("");
   const [sheetID, setSheetID] = useState("");
   const [isEditing,setIsEditing]=useState({check:false,id:""});
+  if(!localStorage.getItem('token'))
+  {
+    redirect('/');
+  }
   useEffect(()=>{
     async function getList() {
       let allDomains=await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/list`);
