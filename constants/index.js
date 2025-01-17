@@ -1,0 +1,22 @@
+export const dummy=[
+    {
+        domain:"waterdamagerestorationnearme.xyz",
+        sheet_Id:"1FxHHGGAex9B5GhUNv7hGAYZmlYdxO2REBiV3HuSbtDY"
+    },
+    {
+        domain:"beamalifeinsurance.com",
+        sheet_Id:"12Z000uL1zALkeZdSGyQD9wtnU7xU8yHprq1E9_u8LZk"
+    },
+    {
+        domain:"facebook.com",
+        sheet_Id:"1RdYQZm1XtQQnGlKsEMQ0tfvLh7KXo1AFgZOvTzltfDY"
+    },
+    {
+        domain:"instagram.com",
+        sheet_Id:"1LDlA_jcPH_c3HP0I1tj1Ar-4CFVTOdaIHSTa8NgtJ8c"
+    },
+    {
+        domain:"youtube.com",
+        sheet_Id:"1h8fzVWysOW6ZcKqnAZ3ovkTB_LHveCaL0LVRbRUiwGA"
+    },
+]
